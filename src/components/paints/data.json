@@ -1,0 +1,19 @@
+[{
+    "title": "Nombre",
+    "id": "nombre_01",
+    "price": "100",
+    "artist": "nameArtist",
+    "image":"/images/image1.png"
+},{
+    "title": "Nombre",
+    "id": "nombre_01",
+    "price": "100",
+    "artist": "nameArtist",
+    "image":"/images/image2.png"
+},{
+    "title": "Nombre",
+    "id": "nombre_01",
+    "price": "100",
+    "artist": "nameArtist",
+    "image":"/images/image2.png"
+}]

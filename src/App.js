@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter,Switch,Route } from 'react-router-dom'
+import MenuBar from './components/menu/Menu';
+import Paints from './components/paints/Paints';
+import Header from './components/Header/Header';
+import Dibujos from "./components/Categories/dibujos/Dibujos";
+import Artistas from "./components/Categories/artistas/Artistas";
+import Pinturas from "./components/Categories/pinturas/Pinturas";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <BrowserRouter>
+        <MenuBar />
+        <Switch>
+        <Route path="/Dibujos" component ={Dibujos}/>
+        <Route path="/Artistas" component ={Artistas}/>
+        <Route path="/Pinturas" component ={Pinturas}/>
+        </Switch>
+      </BrowserRouter>
+      <Paints />
+    </>
+
+
   );
 }
 

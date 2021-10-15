@@ -1,0 +1,12 @@
+.sidebar {
+    max-width: 150px;
+    max-height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color:#ff895d;
+    display: grid;
+    border-radius: 1% 5% 5% 1%;
+  }
+.sidebar-subitem-text {
+    font-size: 0.8rem;
+    background-color: green;
+  }
