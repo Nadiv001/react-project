@@ -1,12 +1,11 @@
 import React from "react";
-import { BrowserRouter,Switch,Route } from 'react-router-dom'
-import MenuBar from './components/menu/Menu';
-import Paints from './components/paints/Paints';
-import Header from './components/Header/Header';
-import Dibujos from "./components/Categories/dibujos/Dibujos";
-import Artistas from "./components/Categories/artistas/Artistas";
-import Pinturas from "./components/Categories/pinturas/Pinturas";
-
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import MenuBar from "./components/menu/Menu.jsx";
+import Header from "./components/header/Header.jsx";
+import Home from "./layouts/Home";
+import Artists from "./layouts/Artists";
+import Paints from "./layouts/Paints";
+import NotFound from "./layouts/NotFound";
 
 function App() {
   return (
@@ -15,15 +14,16 @@ function App() {
       <BrowserRouter>
         <MenuBar />
         <Switch>
-        <Route path="/Dibujos" component ={Dibujos}/>
-        <Route path="/Artistas" component ={Artistas}/>
-        <Route path="/Pinturas" component ={Pinturas}/>
+          <Route exact path="/">
+            <Redirect to="/Home" />
+          </Route>
+          <Route path="/Home" component={Home} />
+          <Route path="/Artists" component={Artists} />
+          <Route path="/Paints" component={Paints} />
+          <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
-      <Paints />
     </>
-
-
   );
 }
 
