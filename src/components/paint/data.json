@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Nombre111",
+    "id": "nombre_01",
+    "price": "100",
+    "artist": "nameArtist",
+    "image": "../../images/arte1.jpg"
+  },
+  {
+    "title": "Nombre222",
+    "id": "nombre_01",
+    "price": "100",
+    "artist": "nameArtist",
+    "image": "../../images/arte2.jpg"
+  },
+  {
+    "title": "Nombre333",
+    "id": "nombre_01",
+    "price": "100",
+    "artist": "nameArtist",
+    "image": "../../images/arte3.jpg"
+  }
+]

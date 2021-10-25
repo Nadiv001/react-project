@@ -1,5 +1,4 @@
-import { render } from "@testing-library/react";
-import "./menu.css";
+import "../../Styles/menu.css";
 import { Link } from "react-router-dom";
 import React from "react";
 import { MenuItem } from "@material-ui/core";
@@ -29,13 +28,13 @@ const MenuBar = () => {
         open={Boolean(anchorEl)}
       >
         <MenuItem onClick={handleClose}>
-          <Link to="/Pinturas">Pinturas</Link>
+          <Link to="/Home">Home</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to="/Dibujos">Dibujos</Link>
+          <Link to="/Artists">Artists</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to="/Artistas">Artistas</Link>
+          <Link to="/Paints">Paints</Link>
         </MenuItem>
       </Menu>
     </div>
