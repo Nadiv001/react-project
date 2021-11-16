@@ -1,6 +1,6 @@
 import React from "react";
-import Paint from "../components/paint/Paint.jsx";
-import data from "../components/paint/data.json";
+import Paint from "../components/Paint.jsx";
+import data from "../data/paints.json";
 
 const Pinturas = () => {
   return (

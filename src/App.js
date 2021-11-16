@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import MenuBar from "./components/menu/Menu.jsx";
-import Header from "./components/header/Header.jsx";
+import MenuBar from "./components/Menu.jsx";
+import Header from "./components/Header.jsx";
 import Home from "./layouts/Home";
 import Artists from "./layouts/Artists";
 import Paints from "./layouts/Paints";

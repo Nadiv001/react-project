@@ -1,4 +1,4 @@
-import "../../Styles/menu.css";
+import "../styles/menu.css";
 import { Link } from "react-router-dom";
 import React from "react";
 import { MenuItem } from "@material-ui/core";

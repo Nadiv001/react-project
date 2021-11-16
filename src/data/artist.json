@@ -1,0 +1,26 @@
+[
+  {
+    "id": "id_1",
+    "name": "name1",
+    "gender": "masculino",
+    "day_of_birth": "03/04/1971",
+    "nationality": "nationality1",
+    "image": "../../images/artist/artist1.jpg"
+  },
+  {
+    "id": "id_2",
+    "name": "name2",
+    "gender": "masculino",
+    "day_of_birth": "03/04/1972",
+    "nationality": "nationality2",
+    "image": "../../images/artist/artist2.jpg"
+  },
+  {
+    "id": "id_3",
+    "name": "name3",
+    "gender": "masculino",
+    "day_of_birth": "03/04/1973",
+    "nationality": "nationality3",
+    "image": "../../images/artist/artist3.jpg"
+  }
+]

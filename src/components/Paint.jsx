@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/paint.css";
+import "../styles/paint.css";
 
 function Paint({ paint }) {
   return (
@@ -12,7 +12,6 @@ function Paint({ paint }) {
         <p>
           <button>Agregar al carrito</button>
         </p>
-        <div></div>
       </div>
     </div>
   );
