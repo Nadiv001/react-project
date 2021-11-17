@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/paint.css";
+import "../styles/Paint.module.css";
 
 function Paint({ paint }) {
   return (

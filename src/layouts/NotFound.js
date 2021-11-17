@@ -1,12 +1,18 @@
 import React from "react";
-const Artists = () => {
+import AppStyle from "../styles/App.module.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
+const NotFound = () => {
   return (
-    <div>
+    <div className={AppStyle.NotFound}>
+      <Navbar />
       <h2>404</h2>
       <div>
         <h3>Página no encontrada</h3>
       </div>
+      <Footer />
     </div>
   );
 };
-export default Artists;
+export default NotFound;
