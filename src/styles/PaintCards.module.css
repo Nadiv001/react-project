@@ -9,8 +9,7 @@
   padding: 0rem 2rem;
   color: #524d36;
 }
-
-.cards__container {
+.item .itemPicWrap .itemImg .itemInfo .cardsContainer {
   width: 100%;
   height: 100%;
   display: flex;
@@ -19,17 +18,17 @@
   padding: 0rem 2rem;
 }
 
-.cards__wrapper {
+.cardsWrapper {
   position: relative;
   margin: 30px 0 30px;
 }
 
-.cards__items {
+.cardsItems {
   display: flex;
   flex-wrap: wrap;
 }
 
-.cards__item {
+.cardsItem {
   min-width: 10rem;
   max-width: 15rem;
   display: flex;
@@ -38,7 +37,7 @@
   border-radius: 10px;
 }
 
-.cards__item__card {
+.item {
   display: flex;
   flex-flow: column;
   width: 100%;
@@ -50,19 +49,19 @@
   text-decoration: none;
 }
 
-.cards__item__pic-wrap {
+.itemPicWrap {
   position: relative;
   width: 100%;
   padding-top: 67%;
   overflow: hidden;
 }
 
-.fade-img {
+.fadeImg {
   animation-name: fade-img;
   animation-duration: 2s;
 }
 
-.cards__item__pic-wrap::after {
+.itemPicWrap::after {
   content: attr(data-category);
   position: absolute;
   bottom: 0;
@@ -76,7 +75,7 @@
   box-sizing: border-box;
 }
 
-.cards__item__img {
+.itemImg {
   position: absolute;
   top: 0;
   right: 0;
@@ -92,11 +91,11 @@
   z-index: 100;
 }
 
-.cards__item__img:hover {
+.itemImg:hover {
   transform: scale(1.1);
 }
 
-.cards__item__info {
+.itemInfo {
   width: 100%;
   height: 100%;
   display: flex;
@@ -105,17 +104,17 @@
   padding: 1rem;
 }
 
-.cards__item__name {
+.itemArtist {
   color: #252e48;
   font-size: 18px;
   line-height: 24px;
 }
 
-.cards__item__price {
+.itemPrice {
   color: red;
 }
 
-.cards__item__cart {
+.itemTitle {
   text-align: right;
   font-size: 1.5rem;
   color: #252e48;
@@ -123,17 +122,6 @@
   border: 0px;
 }
 
-.cards__item__cart:hover {
-  color: rgb(108, 158, 42);
-}
-
-.cards__item_payment {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-}
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;

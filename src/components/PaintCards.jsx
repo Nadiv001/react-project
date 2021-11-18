@@ -1,11 +1,25 @@
 import React, { useState, useEffect } from "react";
+import { db } from "../firebase-config";
+import { collection, getDocs } from "firebase/firestore";
 import PaintCardsStyle from "../styles/PaintCards.module.css";
 import PaintCardItem from "./PaintCardItem";
 import image1 from "../images/paint/arte1.jpg";
 
-function PaintCards(props) {
-  const [productList, setProductList] = useState([]);
-  const [categoryList, setCategoryList] = useState([]);
+function PaintCards() {
+  const [paints, setPaints] = useState([]);
+  const artistRef = collection(db, "paints");
+
+  useEffect(() => {
+    const getPaints = async () => {
+      const data = await getDocs(artistRef);
+      setPaints(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getPaints();
+  }, []);
+
+  // const [productList, setProductList] = useState([]);
+  // const [categoryList, setCategoryList] = useState([]);
 
   // const fetchAllProducts = async () => {
   //   const response = await getAllProducts();
@@ -48,17 +62,15 @@ function PaintCards(props) {
       <h1 className={PaintCardsStyle.showProducts}>
         Mira las obras de nuestros Artistas
       </h1>
-      <div className={PaintCardsStyle.cards__container}>
-        <div className={PaintCardsStyle.cards__wrapper}>
-          <ul className={PaintCardsStyle.cards__items}>
-            {productList.map((product) => (
+      <div className={PaintCardsStyle.cardsContainer}>
+        <div className={PaintCardsStyle.cardsWrapper}>
+          <ul className={PaintCardsStyle.cardsItems}>
+            {paints.map((paint) => (
               <PaintCardItem
-                src={image1}
-                NombreProducto={product.NombreProducto}
-                PrecioVenta={product.PrecioVenta}
-                list={props.list}
-                setCartProductList={props.setCartProductList}
-                producto={product}
+                artist={paint.artist.name}
+                image={paint.image}
+                price={paint.price}
+                title={paint.title}
               />
             ))}
           </ul>

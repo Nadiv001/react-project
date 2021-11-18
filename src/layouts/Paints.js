@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import Filter from "../components/Filter";
 import PaintCards from "../components/PaintCards.jsx";
 import Footer from "../components/Footer";
-import data from "../data/paints.json";
 
 const Paints = (props) => {
   const [categoryId, setCategoryId] = useState(null);

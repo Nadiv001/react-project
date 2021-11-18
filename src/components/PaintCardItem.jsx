@@ -1,19 +1,29 @@
 import React from "react";
-import "../styles/PaintCards.module.css";
+import PaintCardsStyle from "../styles/PaintCards.module.css";
 
 function Paint(props) {
   return (
-    <div className="paint">
-      <div key={props.id} className="preview">
-        <img src={props.image} alt={`${props.title}`} className="styleImage" />
-        <h3>{props.title}</h3>
-        <p>{props.artist}</p>
-        <h5>{props.price}</h5>
-        <p>
-          <button>Agregar al carrito</button>
-        </p>
-      </div>
-    </div>
+    <>
+      <li className={PaintCardsStyle.cardsItem}>
+        <div className={PaintCardsStyle.item}>
+          <figure className={PaintCardsStyle.itemPicWrap}>
+            <img
+              src={props.image}
+              alt="artist_image"
+              className={PaintCardsStyle.itemImg}
+            />
+          </figure>
+          <div key={props.id} className={PaintCardsStyle.itemInfo}>
+            <p className={PaintCardsStyle.itemArtist}>{props.artist}</p>
+            <p className={PaintCardsStyle.itemPrice}>{props.price}</p>
+            <p className={PaintCardsStyle.itemTitle}>{props.title}</p>
+            <p>
+              <button>Contactar</button>
+            </p>
+          </div>
+        </div>
+      </li>
+    </>
   );
 }
 
