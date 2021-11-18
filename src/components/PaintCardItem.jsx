@@ -8,6 +8,9 @@ function Paint(props) {
   useEffect(() => {
     getPaintUrl(props.image).then((url) => setUrl(url));
   }, []);
+  useEffect(() => {
+    getPaintUrl(props.image).then((url) => setUrl(url));
+  }, [props.image]);
 
   return (
     <>
@@ -21,12 +24,22 @@ function Paint(props) {
             />
           </figure>
           <div key={props.id} className={PaintCardsStyle.itemInfo}>
+            <p className={PaintCardsStyle.itemTitle}>{props.title}</p>
             <p className={PaintCardsStyle.itemArtist}>{props.artist}</p>
             <p className={PaintCardsStyle.itemPrice}>${props.price} USD</p>
-            <p className={PaintCardsStyle.itemTitle}>{props.title}</p>
-            <p>
-              <button>Contactar</button>
-            </p>
+            <div className={PaintCardsStyle.itemContact}>
+              <a
+                href="https://wa.me/573214477274?text=I%20love%20your%20paint!"
+                target="_blank"
+              >
+                <button
+                  type="button"
+                  className={PaintCardsStyle.itemContactBtn}
+                >
+                  Contactar
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </li>

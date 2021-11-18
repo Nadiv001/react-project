@@ -5,10 +5,8 @@ function Filter(props) {
   const updateCheckBox = (event) => {
     if (event.target.checked) {
       props.setCategoryId(parseInt(event.target.value));
-      console.log("Evento: " + event.target.value);
     } else {
       props.setCategoryId(null);
-      console.log("NO evento: " + event.target.value);
     }
   };
 

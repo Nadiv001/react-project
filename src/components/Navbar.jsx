@@ -26,6 +26,12 @@ function Navbar() {
               <p className={NavbarStyle.text}>Pinturas</p>
             </Link>
           </li>
+          <li>
+            <label class={NavbarStyle.switch}>
+              <input type="checkbox" />
+              <span class={NavbarStyle.sliderRound}></span>
+            </label>
+          </li>
         </ul>
       </nav>
     </>

@@ -104,7 +104,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.2rem 1rem 0.5rem 1rem;
 }
 
 .itemArtist {
@@ -114,15 +114,21 @@
 }
 
 .itemPrice {
-  color: red;
+  color: #524d36;
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .itemTitle {
-  text-align: right;
+  text-align: center;
   font-size: 1.5rem;
-  color: #252e48;
+  color: #524d36;
   background-color: #fff;
   border: 0px;
+}
+
+.itemContact {
+  text-align: center;
 }
 
 @media only screen and (min-width: 1200px) {

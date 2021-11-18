@@ -8,6 +8,9 @@ function CardItem(props) {
   useEffect(() => {
     getArtistUrl(props.image).then((url) => setUrl(url));
   }, []);
+  useEffect(() => {
+    getArtistUrl(props.image).then((url) => setUrl(url));
+  }, [props.image]);
 
   return (
     <>
@@ -27,14 +30,6 @@ function CardItem(props) {
               {props.nationality}
             </p>
             <p className={ArtistCardsStyle.cardsItemBirth}>{props.birth}</p>
-            {/* <div className="cards__item_payment">
-              <button
-                type="button"
-                onClick={addCartProductList}
-                className="cards__item__cart"
-              >
-              </button>
-            </div> */}
           </div>
         </div>
       </li>

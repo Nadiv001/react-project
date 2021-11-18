@@ -6,7 +6,7 @@
   background: #fff;
 }
 
-.showProducts {
+.showArtists {
   text-align: left;
   padding: 0rem 2rem;
   color: #524d36;
@@ -102,27 +102,37 @@
   width: 100%;
   height: 100%;
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
 }
 
 .cardsItemName {
-  color: #252e48;
+  color: #524d36;
   font-size: 18px;
   line-height: 24px;
 }
 
 .cardsItemGender {
-  color: red;
+  color: #524d36;
+  padding: 0.2rem 0rem;
 }
 
 .cardsItemNationality {
-  text-align: right;
-  font-size: 1.5rem;
-  color: #252e48;
+  text-align: center;
+  color: #524d36;
   background-color: #fff;
   border: 0px;
+  padding: 0.2rem 0rem;
+}
+
+.cardsItemBirth {
+  text-align: center;
+  color: #524d36;
+  background-color: #fff;
+  border: 0px;
+  padding: 0.2rem 0rem;
 }
 
 @media only screen and (min-width: 1200px) {
