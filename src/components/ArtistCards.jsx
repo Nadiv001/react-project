@@ -3,7 +3,6 @@ import { db } from "../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import ArtistCardsStyle from "../styles/ArtistCards.module.css";
 import ArtistCardItem from "./ArtistCardItem";
-import image1 from "../images/artist/artist1.jpg";
 
 function ArtistCards() {
   const [artists, setArtists] = useState([]);
@@ -62,9 +61,9 @@ function ArtistCards() {
       <h1 className={ArtistCardsStyle.showProducts}>
         Mira a los creadores de magia
       </h1>
-      <div className={ArtistCardsStyle.cards__container}>
-        <div className={ArtistCardsStyle.cards__wrapper}>
-          <ul className={ArtistCardsStyle.cards__items}>
+      <div className={ArtistCardsStyle.cardsContainer}>
+        <div className={ArtistCardsStyle.cardsWrapper}>
+          <ul className={ArtistCardsStyle.cardsItems}>
             {artists.map((artist) => (
               <ArtistCardItem
                 image={artist.image}

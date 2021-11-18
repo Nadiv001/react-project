@@ -17,7 +17,8 @@ body {
 .NotFound,
 .Paints {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,6 +53,7 @@ body {
 }
 
 .Paints {
+  height: fit-content;
   background-color: #f2ebb8;
   display: flex;
   flex-direction: row;

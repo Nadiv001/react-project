@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ArtistCardsStyle from "../styles/ArtistCards.module.css";
+import { getArtistUrl } from "./storage";
 
 function CardItem(props) {
+  const [url, setUrl] = useState("");
+
+  useEffect(() => {
+    getArtistUrl(props.image).then((url) => setUrl(url));
+  }, []);
+
   return (
     <>
       <li className={ArtistCardsStyle.cardsItem}>
         <div className={ArtistCardsStyle.cardsItemCard}>
           <figure className={ArtistCardsStyle.cardsItemPicWrap}>
             <img
-              src={props.image}
+              src={url}
               alt="artist_image"
-              className={ArtistCardsStyle.cards__item__img}
+              className={ArtistCardsStyle.cardsItemImg}
             />
           </figure>
           <div className={ArtistCardsStyle.cardsItemInfo}>

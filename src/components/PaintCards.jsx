@@ -3,7 +3,6 @@ import { db } from "../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import PaintCardsStyle from "../styles/PaintCards.module.css";
 import PaintCardItem from "./PaintCardItem";
-import image1 from "../images/paint/arte1.jpg";
 
 function PaintCards() {
   const [paints, setPaints] = useState([]);
@@ -67,8 +66,8 @@ function PaintCards() {
           <ul className={PaintCardsStyle.cardsItems}>
             {paints.map((paint) => (
               <PaintCardItem
-                artist={paint.artist.name}
                 image={paint.image}
+                artist={paint.artist.name}
                 price={paint.price}
                 title={paint.title}
               />
