@@ -5,14 +5,9 @@ function Footer() {
   return (
     <>
       <footer className={FooterStyle.footer}>
-        <div className={FooterStyle.logo}>Barçasta</div>
         <div className={FooterStyle.info}>
-          <div className={FooterStyle.phone}>
-            <p> +57 316 506 2308 </p>
-          </div>
-          <div className={FooterStyle.copy}>
-            <p> Copyright 2021 </p>
-          </div>
+          <p className={FooterStyle.text}> ¿Necesitas ayuda? </p>
+          <p className={FooterStyle.phone}> +57 321 447 2738 </p>
         </div>
       </footer>
     </>

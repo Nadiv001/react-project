@@ -5,11 +5,13 @@ import Footer from "../components/Footer";
 
 const NotFound = () => {
   return (
-    <div className={AppStyle.NotFound}>
+    <div>
       <Navbar />
-      <h2>404</h2>
-      <div>
-        <h3>Página no encontrada</h3>
+      <div className={AppStyle.NotFound}>
+        <h2>404</h2>
+        <div>
+          <h3>Página no encontrada</h3>
+        </div>
       </div>
       <Footer />
     </div>

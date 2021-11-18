@@ -1,24 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import AppStyle from "../styles/App.module.css";
-import Paint from "../components/Paint.jsx";
 import Navbar from "../components/Navbar";
+import Filter from "../components/Filter";
+import PaintCards from "../components/PaintCards.jsx";
 import Footer from "../components/Footer";
 import data from "../data/paints.json";
 
-const Paints = () => {
+const Paints = (props) => {
+  const [categoryId, setCategoryId] = useState(null);
+
   return (
-    <div className={AppStyle.Paints}>
+    <div>
       <Navbar />
-      <h2>Pinturas</h2>
-      <div>
-        <h3>Aqui es la categoría de Pinturas</h3>
-        {data.map((paint) => (
-          <Paint paint={paint} />
-        ))}
+      <div className={AppStyle.Paints}>
+        <Filter setCategoryId={setCategoryId} />
+        <PaintCards
+          list={props.list}
+          setCartProductList={props.setCartProductList}
+          categoryId={categoryId}
+        />
       </div>
       <Footer />
     </div>
   );
+  // {data.map((paint) => (
+  //   <Paint paint={paint} />
+  // ))}
 };
 
 export default Paints;

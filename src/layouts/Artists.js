@@ -1,23 +1,23 @@
-import React from "react";
-import Artist from "../components/ArtistCard.jsx";
+import React, { useState } from "react";
 import AppStyle from "../styles/App.module.css";
-import ArtistStyle from "../styles/Artist.module.css";
 import Navbar from "../components/Navbar";
+import Filter from "../components/Filter";
+import ArtistCards from "../components/ArtistCards.jsx";
 import Footer from "../components/Footer";
-import data from "../data/artist.json";
 
-const Artists = () => {
+const Artists = (props) => {
+  const [categoryId, setCategoryId] = useState(null);
+
   return (
-    <div className={AppStyle.Artists}>
+    <div>
       <Navbar />
-      <h2>Artistas</h2>
-      <div className={ArtistStyle.page}>
-        <h3>Aqui es la categoría de Artistas</h3>
-        <div className={ArtistStyle.pageCards}>
-          {data.map((artist) => (
-            <Artist artist={artist} />
-          ))}
-        </div>
+      <div className={AppStyle.Artists}>
+        <Filter setCategoryId={setCategoryId} />
+        <ArtistCards
+          list={props.list}
+          setCartProductList={props.setCartProductList}
+          categoryId={categoryId}
+        />
       </div>
       <Footer />
     </div>
