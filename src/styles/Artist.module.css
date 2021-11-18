@@ -70,18 +70,6 @@
   padding: 1rem;
 }
 
-.cardBtn {
-  text-align: right;
-  font-size: 1.5rem;
-  color: #252e48;
-  background-color: #fff;
-  border: 0px;
-}
-
-.cardBtn:hover {
-  color: rgb(108, 158, 42);
-}
-
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;

@@ -2,11 +2,22 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavbarStyle from "../styles/Navbar.module.css";
 import logo from "../images/Barcasta.png";
+import { useDispatch, useSelector } from "react-redux";
 
 function Navbar() {
+  const dispatch = useDispatch();
+  const isOn = useSelector((state) => state);
+
+  const onClick = () => {
+    dispatch({ type: "toggle" });
+  };
+
   return (
     <>
-      <nav className={NavbarStyle.nav}>
+      <nav
+        className={NavbarStyle.nav}
+        style={{ background: isOn ? "#a69f76" : "#3b361a" }}
+      >
         <Link to="/" className={NavbarStyle.logo}>
           <img src={logo} alt="Barcasta" />
         </Link>
@@ -28,7 +39,7 @@ function Navbar() {
           </li>
           <li>
             <label class={NavbarStyle.switch}>
-              <input type="checkbox" />
+              <input type="checkbox" onChange={onClick} />
               <span class={NavbarStyle.sliderRound}></span>
             </label>
           </li>

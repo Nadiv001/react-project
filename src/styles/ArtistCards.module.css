@@ -3,7 +3,7 @@
   min-height: 100%;
   max-height: fit-content;
   padding-top: 1.5rem;
-  background: #fff;
+  background: rgb(255, 255, 255);
 }
 
 .showArtists {
@@ -122,7 +122,6 @@
 .cardsItemNationality {
   text-align: center;
   color: #524d36;
-  background-color: #fff;
   border: 0px;
   padding: 0.2rem 0rem;
 }
@@ -130,7 +129,6 @@
 .cardsItemBirth {
   text-align: center;
   color: #524d36;
-  background-color: #fff;
   border: 0px;
   padding: 0.2rem 0rem;
 }

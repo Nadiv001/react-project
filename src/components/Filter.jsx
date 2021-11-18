@@ -1,7 +1,10 @@
 import React from "react";
 import FilterStyle from "../styles/Filter.module.css";
+import { useSelector } from "react-redux";
 
 function Filter(props) {
+  const isOn = useSelector((state) => state);
+
   const updateCheckBox = (event) => {
     if (event.target.checked) {
       props.setCategoryId(parseInt(event.target.value));
@@ -12,9 +15,20 @@ function Filter(props) {
 
   return (
     <div className={FilterStyle.filter}>
-      <h2 className={FilterStyle.filterTitle}>Filtrar por:</h2>
-      <div className={FilterStyle.filterSection}>
-        <div className={FilterStyle.category}>
+      <h2
+        className={FilterStyle.filterTitle}
+        style={{ color: isOn ? "#524d36" : "#fff" }}
+      >
+        Filtrar por:
+      </h2>
+      <div
+        className={FilterStyle.filterSection}
+        style={{ color: isOn ? "#524d36" : "#fff" }}
+      >
+        <div
+          className={FilterStyle.category}
+          style={{ color: isOn ? "#524d36" : "#fff" }}
+        >
           <label className={FilterStyle.categoryLabel}>
             <input type="checkbox" onChange={updateCheckBox} value="0" />
             Realismo

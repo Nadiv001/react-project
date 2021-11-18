@@ -3,11 +3,14 @@ import { db } from "../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import ArtistCardsStyle from "../styles/ArtistCards.module.css";
 import ArtistCardItem from "./ArtistCardItem";
+import { useSelector } from "react-redux";
 
 function ArtistCards(props) {
   const [artists, setArtists] = useState([]);
   const [artistsList, setArtistsList] = useState([]);
   const artistRef = collection(db, "artists");
+
+  const isOn = useSelector((state) => state);
 
   useEffect(() => {
     const getArtists = async () => {
@@ -30,8 +33,14 @@ function ArtistCards(props) {
   }, [props.categoryId]);
 
   return (
-    <div className={ArtistCardsStyle.cards}>
-      <h1 className={ArtistCardsStyle.showArtists}>
+    <div
+      className={ArtistCardsStyle.cards}
+      style={{ background: isOn ? "#fff" : "#161306" }}
+    >
+      <h1
+        className={ArtistCardsStyle.showArtists}
+        style={{ color: isOn ? "#3b361a" : "#fff" }}
+      >
         Mira a los creadores de magia
       </h1>
       <div className={ArtistCardsStyle.cardsContainer}>

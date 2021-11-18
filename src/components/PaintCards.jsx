@@ -3,11 +3,14 @@ import { db } from "../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import PaintCardsStyle from "../styles/PaintCards.module.css";
 import PaintCardItem from "./PaintCardItem";
+import { useSelector } from "react-redux";
 
 function PaintCards(props) {
   const [paints, setPaints] = useState([]);
   const [paintsList, setPaintsList] = useState([]);
   const artistRef = collection(db, "paints");
+
+  const isOn = useSelector((state) => state);
 
   useEffect(() => {
     const getPaints = async () => {
@@ -30,8 +33,14 @@ function PaintCards(props) {
   }, [props.categoryId]);
 
   return (
-    <div className={PaintCardsStyle.cards}>
-      <h1 className={PaintCardsStyle.showProducts}>
+    <div
+      className={PaintCardsStyle.cards}
+      style={{ background: isOn ? "#fff" : "#161306" }}
+    >
+      <h1
+        className={PaintCardsStyle.showProducts}
+        style={{ color: isOn ? "#3b361a" : "#fff" }}
+      >
         Mira las obras de nuestros Artistas
       </h1>
       <div className={PaintCardsStyle.cardsContainer}>
